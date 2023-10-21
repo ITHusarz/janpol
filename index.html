@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janpol - Kalkulator nadgodzin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c083cd1a45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <header>
+            <h1>Janpol</h1>
+            <p>Kalkulator nadgodzin</p>
+        </header>
+
+        <div class="result-box">
+            <p id="result">0zł</p>
+        </div>
+
+        <div class="earnings-per-hours-box">
+            <div class="hours-box normal">
+                <p><i class="fa-regular fa-star"></i></p>
+                <span id="normal">0zł</span>
+            </div>
+            <div class="hours-box half">
+                <p><i class="fa-solid fa-star-half-stroke"></i></p>
+                <span id="half">0zł</span>
+            </div>
+            <div class="hours-box double">
+                <p><i class="fa-solid fa-star"></i></p>
+                <span id="double">0zł</span>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <form>
+                <div class="input">
+                    <label for="payment-workers">Wypłata:</label>
+                    <input type="number" id="payment-workers" oninput="payment()">
+                </div>
+                <div class="input">
+                    <label for="hours-workers">Ilość godzin:</label>
+                    <input type="number" id="hours-workers" oninput="payment()">
+                </div>
+                <div class="input">
+                    <label for="saturday-workers">Ilość godzin w sobotę:</label>
+                    <input type="number" id="saturday-workers" oninput="payment()">
+                </div>
+            </form>
+        </div>
+
+
+
+        <button class="btn">Wyczyść</button>
+
+
+
+    </div>
+
+
+
+    <script src="./dist/js/script.min.js"></script>
+</body>
+
+</html>
