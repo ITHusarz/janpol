@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janpol - Kalkulator nadgodzin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c083cd1a45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <header class="box">
+            <h1>Janpol</h1>
+            <p>Kalkulator nadgodzin</p>
+        </header>
+
+        <div class="result-box box">
+            <p id="result">0zł</p>
+        </div>
+
+        <div class="earnings-per-hours-box box">
+            <div class="hours-box normal">
+                <p><i class="fa-regular fa-star"></i></p>
+                <span id="normal">0zł</span>
+            </div>
+            <div class="hours-box half">
+                <p><i class="fa-solid fa-star-half-stroke"></i></p>
+                <span id="half">0zł</span>
+            </div>
+            <div class="hours-box double">
+                <p><i class="fa-solid fa-star"></i></p>
+                <span id="double">0zł</span>
+            </div>
+        </div>
+
+
+        <div class="card box">
+            <form class="workers-card">
+                <div class="input">
+                    <label for="payment-workers">Wypłata:</label>
+                    <input type="number" id="payment-workers" oninput="payment()">
+                </div>
+                <div class="input">
+                    <label for="hours-workers">Ilość godzin:</label>
+                    <input type="number" id="hours-workers" oninput="payment()">
+                </div>
+                <div class="input">
+                    <label for="saturday-workers">Ilość godzin w sobotę:</label>
+                    <input type="number" id="saturday-workers" oninput="payment()">
+                </div>
+            </form>
+
+            <form class="welders-card">
+                
+                <div class="input">
+                    <label for="payment-welders-1">3 ostatnie wypłaty:</label>
+                    <div class="average">
+                        <input type="number" id="payment-welders-1" oninput="payment()">
+                        <input type="number" id="payment-welders-2" oninput="payment()">
+                        <input type="number" id="payment-welders-3" oninput="payment()">
+                    </div>
+                </div>
+                <p class="average-result-text">Średnia <span id="averageValue">0zł</span></p>
+                <div class="input">
+                    <label for="hours-workers">Ilość godzin:</label>
+                    <input type="number" id="hours-workers" oninput="payment()">
+                </div>
+                <div class="input">
+                    <label for="saturday-workers">Ilość godzin w sobotę:</label>
+                    <input type="number" id="saturday-workers" oninput="payment()">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="box btns">
+
+            <button class="btn">Wyczyść</button>
+            <button class="btn" id="cardBtn">Akord</button>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="./dist/js/script.min.js"></script>
+</body>
+
+</html>
